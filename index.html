@@ -6,8 +6,125 @@
     <title>Javascript Challenge- day-7</title>
   </head>
   <body>
-    <h2>Working on Javascript Challenge - day-7</h2>
+    <div class="container">
+      <h3>Javascript Challenge- day-7</h3>
+    </div>
 
-    <script></script>
+    <script>
+      //Exercises: Level 1
+      //1. Declare a function fullName and it print out your full name.
+      function fullName() {
+        console.log("Abdulsalam Muhammed Jamiu");
+      }
+      // fullName();
+      //
+      //2. Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full - name
+
+      function fullNames(firstName, lastName) {
+        const fulName = firstName + " " + lastName;
+        console.log(" My Full Name is:" + fulName);
+      }
+
+      // fullNames("Abdulsalam", "Muhammed");
+
+      // 3. Declare a function addNumbers and it takes two two parameters and it returns sum
+      function addNumbers(x, y) {
+        return x + y;
+      }
+
+      const result = addNumbers(5, 3);
+      // console.log("The sum of x,y is:", result);
+
+      //4. An area of a rectangle is calculated as follows: area = length x width. Write a function which calculates areaOfRectangle.
+      function areaOfRectangle(length, width) {
+        return length * width;
+      }
+      const area = areaOfRectangle(20, 32);
+      // console.log("The area of rectangle is:", area);
+
+      //5. A perimeter of a rectangle is calculated as follows: perimeter= 2x(length + width). Write a function which calculates perimeterOfRectangle.
+
+      function perimeterOfRectangle(length, width) {
+        return 2 * (length + width);
+      }
+
+      const perimeter = perimeterOfRectangle(12, 30);
+      // console.log("The perimeter Of Rectangle is:", perimeter);
+      //6.  A volume of a rectangular prism is calculated as follows: volume = length x width x height. Write a function which calculates volumeOfRectPrism.
+
+      function volumeOfRectPrism(length, width, height) {
+        return length * width * height;
+      }
+
+      const finalResult = volumeOfRectPrism(21, 13, 32);
+      // console.log(finalResult);
+
+      //7. Area of a circle is calculated as follows: area = π x r x r. Write a function which calculates areaOfCircle
+      function areaOfCircle(PI, R) {
+        return PI * R * R;
+      }
+
+      const areaResult = areaOfCircle(23.32, 31);
+      // console.log(areaResult);
+
+      //13. Body mass index(BMI) is calculated as follows: bmi = weight in Kg / (height x height) in m2. Write a function which calculates bmi. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is underweight, normal, overweight or obese based the information given below.
+      // The same groups apply to both men and women.
+      // Underweight: BMI is less than 18.5
+      // Normal weight: BMI is 18.5 to 24.9
+      // Overweight: BMI is 25 to 29.9
+      // Obese: BMI is 30 or more.
+      function BMI(weight, height) {
+        // bmi = weight in Kg / (height x height) in m2.
+        const bmi = weight % (height * height);
+        // console.log();
+
+        if (bmi < 18.5) {
+          console.log(bmi);
+        }
+      }
+
+      BMI(22.02, 33);
+
+      // console.log(testResult);
+
+      //14. Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer
+      let months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "Sepember",
+        "October",
+        "November",
+        "December",
+      ];
+      function checkSeason() {
+        const newDate = new Date();
+        const currentMonth = newDate.getMonth();
+        const upDateMonth = months[currentMonth];
+        // console.log(upDateMonth);
+        months.forEach((newMonth) => {
+          // console.log(newMonth);
+
+          if (newMonth === upDateMonth) {
+            console.log(upDateMonth);
+          }
+        });
+      }
+      // checkSeason();
+
+      // Math.max returns its largest argument. Write a function findMax that takes three arguments and returns their maximum with out using Math.max method
+
+      function maxVal(x = 2, y = 1, z = 0) {
+        return Math.max(x, y, z);
+      }
+
+      const solution = maxVal(1, -3, -8);
+      console.log("The maxvalue is :", solution);
+    </script>
   </body>
 </html>
